@@ -1,1 +1,1 @@
-#Angular Node - Reset Password Application
+# Angular Node - Reset Password Application
