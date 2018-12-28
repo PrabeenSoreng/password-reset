@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "passwordreset-client"
+		},
+		{
+			"path": "passwordreset-server"
+		}
+	],
+	"settings": {}
+}
