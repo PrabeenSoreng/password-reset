@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
