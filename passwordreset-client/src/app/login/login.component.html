@@ -1,10 +1,15 @@
 <div id="center">
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="box">
             <h1>Login Form</h1>
-            <input type="email" class="username" placeholder="Email">
-            <input type="password" class="username" placeholder="Password">
-            <button class="button">Login</button>
+            <input type="email" class="username" formControlName="email" placeholder="Email">
+            <div class="error" *ngIf="email.touched && email.invalid">
+                <small *ngIf="email.errors.email">Email is invalid.</small>
+                <small *ngIf="email.errors.required">Email is required.</small>
+            </div>
+            <input type="password" class="username" formControlName="password" placeholder="Password">
+            <small class="error" *ngIf="password.touched && password.invalid">Password is required.</small>
+            <button class="button" [disabled]="!loginForm.valid">Login</button>
         </div>
     </form>
     <p>Forgot password? <a routerLink="forgot-password" class="fpwd">Click Here</a></p>

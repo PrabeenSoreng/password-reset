@@ -13,6 +13,11 @@ interface IResetPassword {
   token: string;
 }
 
+interface ILogin {
+  email: string;
+  password: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -30,5 +35,9 @@ export class AuthService {
     return this.http.post<IResetPassword>(`${url}/reset-password/${token}`, {
       password
     });
+  }
+
+  loginForm(body: ILogin): Observable<any> {
+    return this.http.post(`${url}/login`, body);
   }
 }

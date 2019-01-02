@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { AuthService } from './services/auth.service';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
